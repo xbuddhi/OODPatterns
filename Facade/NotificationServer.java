@@ -10,6 +10,6 @@ public class NotificationServer {
     }
 
     public void send(AuthToken authToken, Message message, String target) {
-        System.out.println("Sending a message");
+        System.out.println("Sending a message" + message.getContent()+" to "+target);
     }
 }

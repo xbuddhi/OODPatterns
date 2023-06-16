@@ -1,21 +1,11 @@
-import Iterator.BrowseHistory;
-import Iterator.Iterator;
+import Facade2.NotificationService;
 
 public class Main {
     public static void main(String[] args) {
-        BrowseHistory history = new BrowseHistory();
-        history.push("a");
-        history.push("b");
-        history.push("c");
-        history.push("d");
-        history.push("e");
         
-        Iterator<String> iterator = history.createIterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.current());
-            iterator.next();
-        }
-
-
+        NotificationService service = new NotificationService();
+        service.send("Hello World", "username");
+        service.send("Hello ererw", "username2");
+        
     }
 }
